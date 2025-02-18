@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Login</title>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/signup.js" defer></script>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<body>
     <section>
-        
         <form action="/req/login" method="post">
             <h1>Login</h1>
             <div class="dialog-row">
@@ -19,8 +16,8 @@
             </div>
             <div class="inputbox">
                 <ion-icon name="email-outline"></ion-icon>
-                <input name="username" id="username"type="name" required>
-                <label for="">username</label>
+                <input name="username" id="username" type="text" required>
+                <label for="">Username</label>
             </div>
             <div class="inputbox">
                 <ion-icon name="lock-closed-outline"></ion-icon>
@@ -28,13 +25,13 @@
                 <label for="">Password</label>
             </div>
             <div class="register">
-                <p><a href="#">Forget Password ?</a></p>
+                <p><a href="#">Forgot Password?</a></p>
             </div>
             <button>Log in</button>
             <div class="register">
-                <p>Don't have a account ?<a href="/req/signup"> Register!!</a></p>
+                <p>Don't have an account? <a href="/req/signup">Register!!</a></p>
             </div>
         </form>
     </section>
 </body>
-  
+</html>

@@ -1,19 +1,21 @@
 package QwaBar4.bank.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "users")
 public class UserModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String username;
     private String email;
     private String password;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private AccountModel account; // Link to the Account
 
     // Getters and setters
     public Long getId() {
@@ -46,5 +48,13 @@ public class UserModel {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public AccountModel getAccount() {
+        return account;
+    }
+
+    public void setAccount(AccountModel account) {
+        this.account = account;
     }
 }

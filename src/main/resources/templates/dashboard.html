@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Welcome to Your Dashboard, <span th:text="${username}"></span>!</h1>
+    <div th:if="${account}">
+        <h2>Account Details</h2>
+        <p><strong>Account Number:</strong> <span th:text="${account.accountNumber}"></span></p>
+        <p><strong>Balance:</strong> $<span th:text="${account.balance}"></span></p>
+    </div>
+    <a th:href="@{/logout}">Logout</a>
+</body>
+</html>
